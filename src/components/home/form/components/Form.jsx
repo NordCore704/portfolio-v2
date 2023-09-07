@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BsArrowRight, BsPin } from "react-icons/bs";
+import emailjs from '@emailjs/browser'
 
 const Form = () => {
   const [ref, inView] = useInView({
     threshold: 0.6,
     triggerOnce: true,
   });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
@@ -26,6 +30,32 @@ const Form = () => {
       opacity: 1,
     },
   };
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+    const serviceId = 'service_kj6jp4r'
+    const publicKey = 'DPdRzMaNJKGH1ga1W'
+    const templateId = 'template_zc87syd'
+
+
+    const templateParams = {
+      from_email: email,
+      from_name: name,
+      to_name: 'Simon Peter',
+      message: subject,
+    }
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
+      console.log('email sent successfully');
+      setName('')
+      setEmail('')
+      setSubject('')
+    }).catch((error) => {
+        console.log('error sending mail', error);
+      })
+  };
+
   return (
     <motion.div
       transition={{
@@ -46,17 +76,32 @@ const Form = () => {
       <form
         action=""
         className="w-full flex items-center justify-center flex-col md:justify-normal gap-5"
+        onSubmit={handleSubmit}
       >
         <input
           type="text"
           className="bg-transparent border-b w-full placeholder:text-scheme-gray text-scheme-white outline-none border-gray-500"
           placeholder="Tell Me Your Name"
+          name="name"
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
           className="bg-transparent border-b w-full placeholder:text-scheme-gray outline-none text-scheme-white border-gray-500"
-          placeholder="What You Want Your Email To Be"
+          placeholder="Tell Me Your Email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
         />
+
+        <textarea
+          name="subject"
+          id="subject"
+          placeholder="What Is Your Idea?"
+          cols="30"
+          rows="10"
+          className="bg-transparent border-b w-full placeholder:text-scheme-gray text-scheme-white outline-none border-gray-500"
+          onChange={(e) => setSubject(e.target.value)}
+        ></textarea>
 
         <button className="flex w-full justify-between items-center font-semibold text-scheme-white p-2 gap-5 hover:text-scheme-yellow">
           Pitch Your Idea{" "}
