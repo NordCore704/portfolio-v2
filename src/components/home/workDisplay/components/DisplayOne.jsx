@@ -5,6 +5,18 @@ import Image from "next/image";
 import { nftInfo, card } from "@/exports/image-exports";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const DisplayOne = () => {
   const [ref, inView] = useInView({
@@ -41,7 +53,7 @@ const DisplayOne = () => {
   };
   return (
     <div
-      className="h-[50%] w-full sm:w-[50%] sm:h-full flex flex-col gap-8 justify-center items-center p-5"
+      className={`h-[50%] w-full sm:w-[50%] sm:h-full flex flex-col gap-8 justify-center items-center p-5 ${poppins.className}`}
       ref={ref}
     >
       <motion.div
@@ -60,7 +72,7 @@ const DisplayOne = () => {
         <p className="text-scheme-gray sm:text-left text-center text-sm">
           - portfolio
         </p>
-        <p className="font-semibold text-2xl text-scheme-white sm:text-left text-center">
+        <p className={`font-semibold text-2xl text-scheme-white sm:text-left text-center ${openSans.className}`}>
           All Creative Works, Featured Projects
         </p>
         <p className="text-center sm:text-left text-scheme-gray ">

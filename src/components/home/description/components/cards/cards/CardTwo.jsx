@@ -2,6 +2,18 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaReact, FaNodeJs } from "react-icons/fa";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const CardTwo = () => {
   const [ref, inView] = useInView({
@@ -38,7 +50,7 @@ const CardTwo = () => {
       animate={animation}
       initial="init"
       ref={ref}
-      className="bg-scheme-ash-blue-2 shadow-md px-2 py-10  w-56 h-56 text-xl font-semibold text-scheme-white flex items-center justify-end flex-col"
+      className={`bg-scheme-ash-blue-2 shadow-md px-2 py-10  w-56 h-56 text-xl font-semibold text-scheme-white flex items-center justify-end flex-col ${openSans.className}`}
     >
       <div className="flex flex-row-reverse items-center gap-5">
         <p>
@@ -46,7 +58,7 @@ const CardTwo = () => {
         </p>
         <FaReact className="" />
       </div>
-      <p className="text-sm font-semibold">(TypeScript, Nextjs)</p>
+      <p className={`text-sm font-semibold ${poppins.className}`}>(TypeScript, Nextjs)</p>
     </motion.div>
   );
 };

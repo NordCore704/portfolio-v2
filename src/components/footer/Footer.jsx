@@ -4,6 +4,18 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { logo } from "@/exports/image-exports";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const Footer = () => {
   const [ref, inView] = useInView({
@@ -31,7 +43,7 @@ const Footer = () => {
   return (
     <div className="h-80 flex items-center justify-center">
       <motion.div
-        className="flex flex-col items-center justify-center gap-5"
+        className={`flex flex-col items-center justify-center gap-5 ${poppins.className}`}
         transition={{
           ease: "easeInOut",
           duration: 2,
@@ -45,7 +57,7 @@ const Footer = () => {
       >
         <Image src={logo} className="w-10" />
         <p className="text-scheme-gray">
-          <span className="font-semibold text-scheme-white">Thank you </span>{" "}
+          <span className={`font-semibold text-scheme-white ${openSans.className} text-lg`}>Thank you </span>{" "}
           for exploring my portfolio!{" "}
         </p>
         <div className="flex gap-3 text-scheme-white">

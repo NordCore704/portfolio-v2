@@ -8,6 +8,18 @@ import {
   BsEnvelopeFill,
 } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '800',
+})
 
 const Hero = () => {
   const headerVariant = {
@@ -45,7 +57,7 @@ const Hero = () => {
     >
       <div className="flex flex-col gap-10 z-10 w-full">
         <motion.h1
-          className="font-bold text-9xl  flex text-scheme-white line z-10"
+          className={`font-bold text-9xl  flex text-scheme-white line z-10 ${openSans.className}`}
           transition={{
             ease: "easeInOut",
             duration: 2,

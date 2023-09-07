@@ -3,6 +3,18 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { cartO, quizzical, cart, quiz } from "@/exports/image-exports";
 import Image from "next/image";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const DisplayTwo = () => {
   const [ref, inView] = useInView({
@@ -30,7 +42,7 @@ const DisplayTwo = () => {
 
   return (
     <div
-      className="flex gap-16 flex-col-reverse sm:w-[40%] sm:h-full w-full h-[50%] items-center justify-center p-5"
+      className={`flex gap-16 flex-col-reverse sm:w-[40%] sm:h-full w-full h-[50%] items-center justify-center p-5 ${openSans.className}`}
       ref={ref}
     >
       <motion.div

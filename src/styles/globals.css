@@ -7,10 +7,10 @@
 }
 .line{
 
-    line-height: 75px;
+    line-height: 70px;
     /* text-shadow: .03em .03em 0 hsla(230, 40%, 50%, 1); */
     text-shadow: .02em .02em 0 var(--Dark);
-    letter-spacing: -5px;
+    letter-spacing: -12px;
 }
 body{
   background: #2f3241;

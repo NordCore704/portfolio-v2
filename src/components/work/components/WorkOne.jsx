@@ -1,5 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Open_Sans, } from "next/font/google";
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const WorkOne = () => {
   const textVariantOne = {
@@ -25,7 +31,7 @@ const WorkOne = () => {
 
 
   return (
-    <div className="p-5 md:w-[50%] md:h-[100dvh] w-full h-[50%] flex flex-col justify-between gap-16 text-scheme-white">
+    <div className={`p-5 md:w-[50%] md:h-[100dvh] w-full h-[50%] flex flex-col justify-between gap-16 text-scheme-white ${openSans.className}`}>
       <div className="h-[50%] w-full">
         <motion.p  transition={{
         ease: "easeInOut",

@@ -8,6 +8,18 @@ import {
   FiGithub,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '100',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const ContactText = () => {
   const paragraphVariants = {
@@ -44,7 +56,7 @@ const ContactText = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 p-5 w-full h-[40%] md:w-[40%] md:h-full justify-center">
+    <div className={`flex flex-col gap-10 p-5 w-full h-[40%] md:w-[40%] md:h-full justify-center ${poppins.className}`}>
       <motion.p
         className="font-semibold text-scheme-white"
         transition={{
@@ -70,7 +82,7 @@ const ContactText = () => {
           variants={headerVariant}
           animate="animate"
           initial="init"
-          className="text-8xl md:text-8xl lg:text-9xl underline uppercase font-semibold text-scheme-white"
+          className={`text-8xl md:text-8xl lg:text-9xl underline uppercase font-semibold text-scheme-white ${openSans.className}`}
         >
           Get In <br /> Touch
         </motion.p>
@@ -85,37 +97,37 @@ const ContactText = () => {
         variants={contactsVariant}
         animate="animate"
         initial="init"
-        className="flex-col list-none flex gap-4 text-scheme-white font-semibold "
+        className="flex-col list-none flex gap-4 text-scheme-white"
       >
         <li className="hover:text-scheme-yellow ">
           <a
             href="mailto:petersimon0730@gmail.com"
             className="flex gap-4 items-center"
           >
-            <FiCircle className="text-base" /> petersimon0730@gmail.com
+            <FiCircle className="text-base font-semibold" /> petersimon0730@gmail.com
           </a>
         </li>
         <li className="flex gap-4 hover:text-scheme-yellow">
           <a href="https://wa.me/2347052359969" className="flex gap-4 items-center">
-            <FiTriangle className="text-base" />
+            <FiTriangle className="text-base font-semibold" />
             +234-70-5235-9969
           </a>
         </li>
         <li className="flex gap-4 hover:text-scheme-yellow">
           <a href="https://www.linkedin.com/in/peter-simon-99b317220" className="flex gap-4 items-center">
-            <FiSquare className="text-base" />
+            <FiSquare className="text-base font-semibold" />
             LinkedIn
           </a>
         </li>
         <li className="flex gap-4 hover:text-scheme-yellow">
           <a href="https://twitter.com/GoofyWithRae?t=jBy1sHaE8RbDWWApsuso-g&s=09" className="flex gap-4 items-center">
-            <FiTwitter className="text-base" />
+            <FiTwitter className="text-base font-semibold" />
             Twitter
           </a>
         </li>
         <li className="flex gap-4 hover:text-scheme-yellow">
           <a href="https://github.com/NordCore704" className="flex gap-4 items-center">
-            <FiGithub className="text-base" />
+            <FiGithub className="text-base font-semibold" />
             Github
           </a>
         </li>
