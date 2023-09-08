@@ -1,5 +1,17 @@
 import React from "react";
 import { motion } from 'framer-motion'
+import { Open_Sans, Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: '300',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 
 const AboutText = () => {
@@ -14,14 +26,14 @@ const AboutText = () => {
     }
   }
   return (
-    <motion.div className="flex flex-col lg:flex-row gap-5 p-10 w-full h-[60%] md:self-start md:w-[60%] md:h-full justify-center items-center lg:mt-14" variants={variants} animate='animate' initial='init' transition={{
+    <motion.div className={`flex flex-col lg:flex-row gap-5 p-10 w-full h-[60%] md:self-start md:w-[60%] md:h-full justify-center items-center lg:mt-14 ${poppins.className}`} variants={variants} animate='animate' initial='init' transition={{
       delay: 0.4,
       duration: 2,
       type: 'spring',
       ease: 'easeInOut'
     }}>
       <div className="flex flex-col gap-4 lg:w-[60%] lg:mt-14 self-center lg:self-end">
-        <p className="text-7xl font-semibold text-scheme-white text-center md:text-left">
+        <p className={`text-7xl font-semibold text-scheme-white text-center md:text-left${openSans.className}`}>
           My Name is Simon Peter
         </p>
         <p className="text-scheme-gray text-center md:text-left">
