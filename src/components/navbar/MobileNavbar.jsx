@@ -40,14 +40,14 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
           // staggerChildren: 0.4,
           // delayChildren: 2,
         }}
-        className="bg-gradient-to-tl from-scheme-ash-blue-2 to-scheme-yellow p-2 h-[50%] rounded-md w-[70vw] flex items-center justify-center text-center cartoon"
+        className="bg-scheme-ash-blue-2 p-2 h-full rounded-md w-full flex items-center justify-center text-center cartoon"
       >
-        <ul className="flex flex-col gap-6 text-center w-[90%]">
+        <ul className="flex flex-col gap-8 text-center w-[90%]">
           <li className="">
             <Link
               href={"/"}
               onClick={toggleNav}
-              className={currentRoute === "/" ? "active" : ""}
+              className={`text-3xl uppercase ${currentRoute === "/" ? "active" : ""}`}
             >
               Services
             </Link>
@@ -56,7 +56,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
             <Link
               href={"/work"}
               onClick={toggleNav}
-              className={currentRoute === "/search" ? "active" : ""}
+              className={`text-3xl uppercase ${currentRoute === "/work" ? "active" : ""}`}
             >
               Work
             </Link>
@@ -65,7 +65,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
             <Link
               href={"/contact"}
               onClick={toggleNav}
-              className={currentRoute === "/contact" ? "active" : ""}
+              className={`text-3xl uppercase ${currentRoute === "/contact" ? "active" : ""}`}
             >
               Contact
             </Link>

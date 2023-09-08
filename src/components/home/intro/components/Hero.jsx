@@ -8,13 +8,7 @@ import {
   BsEnvelopeFill,
 } from "react-icons/bs";
 import { motion } from "framer-motion";
-import { Open_Sans, Poppins } from "next/font/google";
-
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: '300',
-});
+import { Open_Sans, } from "next/font/google";
 
 const openSans = Open_Sans({
   subsets: ['latin'],

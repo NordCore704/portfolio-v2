@@ -101,7 +101,7 @@ const DisplayOne = () => {
         initial="init"
         ref={ref}
       >
-        <a href="https://github.com/NordCore704/nft-info" className="flex flex-col items-center gap-2">
+        <a href="https://github.com/NordCore704/nft-info" className={`flex flex-col items-center gap-2 ${openSans.className}`}>
           <Image src={card} className="rounded-md " />
           <p className="text-scheme-white text-lg font-semibold hover:text-scheme-yellow">
             NftInfo
