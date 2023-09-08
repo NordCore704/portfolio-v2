@@ -49,7 +49,7 @@ const AboutText = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col text-scheme-gray self-center">
-        <div className="flex gap-1 ">
+        <div className="flex gap-1 text-center">
           <p className="border p-1 rounded-lg text-scheme-gray text-center font-semibold">
             Frontend
           </p>
@@ -61,38 +61,38 @@ const AboutText = () => {
           </p>
         </div>
         <div className="flex gap-1">
-          <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+          <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
             HTML
           </p>
-          <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+          <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
             JavaScript
           </p>
-          <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+          <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
             Python
           </p>
         </div>
         <div className="flex gap-1">
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           C
         </p>
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           TypeScript
         </p>
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           CSS
         </p>
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           Framer Motion
         </p>
         </div>
         <div className="flex gap-1">
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           React
         </p>
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           Nextjs
         </p>
-        <p className="border p-1 rounded-lg text-scheme-gray font-semibold">
+        <p className="border p-1 rounded-lg text-scheme-gray font-semibold text-center">
           GSAP
         </p>
         </div>
