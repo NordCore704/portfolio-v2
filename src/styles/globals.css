@@ -21,3 +21,6 @@ body{
 .transform-top{
   transform-origin: top;
 }
+.text-shadow {
+  text-shadow: .02em .02em 0 whitesmoke;
+}

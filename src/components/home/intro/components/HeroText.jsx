@@ -43,7 +43,7 @@ const HeroText = () => {
       <p className={`text-scheme-gray md:text-left md:w-full ${poppins.className}`}>- Introduction</p>
       <div className="">
         <p className={`font-semibold text-2xl text-center md:text-left ${openSans.className}`}>
-          Crafting Immersive Web Experiences: Meet Frontend Genius Behind the
+          Crafting Immersive Web Experiences: Meet The Frontend Genius Behind the
           code.
         </p>
       </div>

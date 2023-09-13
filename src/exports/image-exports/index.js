@@ -16,6 +16,7 @@ import waze from '@/images/waze.png'
 import jigsaw from '@/images/jigsaw.png'
 import messages from '@/images/messages.png'
 import abstract from '@/images/abstract.png'
+import globeBG from '@/images/cardBG.png'
 export {
     logo,
     logoTwo,
@@ -35,4 +36,5 @@ export {
     jigsaw,
     messages,
     abstract,
+    globeBG,
 }
