@@ -5,8 +5,8 @@ const facebook = "https://www.facebook.com/profile.php?id=100024412431318&mibext
 const github = "https://github.com/NordCore704"
 const projects = {
     nftInfo: {
-        url: "",
-        git: "https://github.com/NordCore704/nft-info"
+        url: "https://nftinfo.vercel.app",
+        git: "https://github.com/NordCore704/nft-info-v2"
     },
     cartO: {
         url: "https://cart-online.vercel.app/",

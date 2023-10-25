@@ -1,8 +1,15 @@
 export const projects = [
     {
         projectName: 'NftInfo',
-        projectURL: '',
-        projectGithub: 'https://github.com/NordCore704/nft-info',
+        projectURL: 'https://nftinfo.vercel.app',
+        projectGithub: 'https://github.com/NordCore704/nft-info-v2',
+        projectLogo: '',
+
+    },
+    {
+        projectName: 'Getlinked Hackathon Challenge',
+        projectURL: 'https://getlinked-challenge-iota.vercel.app/',
+        projectGithub: 'https://github.com/NordCore704/getlinked-challenge',
         projectLogo: '',
 
     },

@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { BsArrowRight, BsPin } from "react-icons/bs";
 import emailjs from '@emailjs/browser'
 import { Open_Sans, Poppins } from "next/font/google";
+import Success from "./Success";
 
 
 const poppins = Poppins({
@@ -24,6 +25,7 @@ const Form = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
@@ -43,7 +45,7 @@ const Form = () => {
     },
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
 
     e.preventDefault();
     const serviceId = 'service_kj6jp4r'
@@ -58,14 +60,16 @@ const Form = () => {
       message: subject,
     }
 
-    emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
-      console.log('email sent successfully');
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
       setName('')
       setEmail('')
       setSubject('')
-    }).catch((error) => {
-        console.log('error sending mail', error);
-      })
+      setShowSuccess(true)
+      document.body.classList.add('overflow-hidden')
+    } catch (error) {
+      console.log('error sending mail', error);
+    }
   };
 
   return (
@@ -123,6 +127,7 @@ const Form = () => {
           </span>
         </button>
       </form>
+      {showSuccess && <Success setShowSuccess={setShowSuccess}/>}
     </motion.div>
   );
 };
